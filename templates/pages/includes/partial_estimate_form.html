@@ -1,0 +1,17 @@
+{% load bootstrap4 %}
+{{estimate_form.media}}
+<form method="POST" action="{% url 'estimate_request' %}" class="js-estimate-request-form" id="estimateForm">
+  {% csrf_token %}
+  <div class="modal-header">
+    <h4 class="modal-title">Schedule Your Free Estimate</h4>
+  </div>
+  <div class="modal-body">
+    {% bootstrap_form_errors estimate_form %}
+    {% bootstrap_form estimate_form %}
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    {% bootstrap_button "Schedule" button_type="submit" button_class="btn-primary"%}
+  </div>
+</form>
