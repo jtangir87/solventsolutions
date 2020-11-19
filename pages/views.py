@@ -8,6 +8,8 @@ from django.core.mail import send_mail
 from .forms import EstimateForm, ContactUsForm
 
 # Create your views here.
+
+
 def estimate_request(request):
     data = dict()
     if request.method == "POST":
