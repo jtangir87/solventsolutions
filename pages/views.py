@@ -76,7 +76,7 @@ def contact_us_form(request):
             send_mail(
                 "NEW CONTACT REQUEST",
                 content,
-                "{}<{}>".format(name, email),
+                "WEBSITE REQUEST<donotreply@solventsolutionsus.com>",
                 ["service@solventsolutionsus.com"],
                 fail_silently=False,
             )
